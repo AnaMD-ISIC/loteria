@@ -60,7 +60,7 @@ body {
 .bar_bar {
     width: 80%;
     height: 1rem;
-    background-color: var(--background-light);
+    background-color: var(--accent-color-3);
     position: relative;
     top: 0rem;
     left: 0rem;
@@ -84,6 +84,10 @@ body {
 
 .big-card {
     height: 544px;
+    width: 360px;
+    object-fit: scale-down;
+    border: black;
+    border-radius: 1rem;
 }
 
 .buttons {

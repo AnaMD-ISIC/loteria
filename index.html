@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
     <title id="loteria">Loteria</title>
+    <script src="assets/js/script.js"></script>
 </head>
-<script src="assets/js/script.js"></script>
+
 <body onload="makeImage();">
     <section class="main-title">
         <h1>Loteria</h1>
@@ -30,13 +31,13 @@
         </section>
     
         <section class="main-card">
-                <img src="assets/img/1.jpg" class="big-card" id="main-card">
+                <img src="assets/img/back.jpg" class="big-card" id="main-card">
         </section>
     
         <section class="buttons">
-            <button class="start">Iniciar</button>
-            <button class="stop">Detener</button>
-            <button class="reload">Reiniciar</button>
+            <button class="start" onclick="cardStart()">Iniciar</button>
+            <button class="stop" onclick="cardStop()">Detener</button>
+            <button class="reload" onclick="cardReload()">Reiniciar</button>
         </section>
     </div>
 </body>
