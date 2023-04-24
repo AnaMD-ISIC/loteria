@@ -2,6 +2,7 @@ let inter;
 let bar;
 let pass;
 let count = 1;
+let list = [];
 
 function randomNum (min, max) {
   var num = Math.floor(Math.random() * max) + min;
@@ -12,16 +13,17 @@ function changeSRC() {
   var random = randomNum(1,54);
   document.getElementById("main-card").src="assets/img/"+ random +".jpg";
   passCard(random);
+  list.push(random);
   return random;
 }
 
 function passCard(random) {
-  if (count==1){
+  if (list.length == 0){
     document.getElementById("card-1").src="assets/img/back.jpg";
     count += 1;
   } else {
     var num = random;
-    document.getElementById("card-1").src="assets/img/"+ num +".jpg";
+    document.getElementById("card-1").src="assets/img/"+ list.pop(-1) +".jpg";
     count += 1;
   }
   
@@ -49,6 +51,7 @@ function cardReload () {
   inter = null;
   clearInterval(bar);
   bar = null;
+  count = 1;
 }
 
 function progressBar(){
