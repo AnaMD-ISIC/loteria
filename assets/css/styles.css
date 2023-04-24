@@ -1,42 +1,30 @@
 :root {
-    --primary-color: #47056B;
-    --secondary-color: #5F0A87;
-    --accent-color-1: #822d89;
-    --accent-color-2: #a4508b;
-    --accent-color-3: #b37196;
-    --accent-transparent-1: rgb(130, 45, 137, 0.6);
-    --accent-transparent-2: rgb(164, 80, 139, 0.6);
-    --accent-transparent-3: rgb(179, 113, 150, 0.6);
+    --primary-color: #1F4FAD;
+    --secondary-color: #3A3791;
+    --accent-color-1: #e08e23;
+    --accent-color-2: #ef023c;
+    --accent-color-3: rgb(90, 172, 124);
+    --accent-transparent-1: rgb(224, 142, 35, 0.55);
+    --accent-transparent-2: rgb(239, 2, 60, 0.55);
+    --accent-transparent-3: rgb(90, 172, 124, 0.55);
     --font-dark: #0C0014;
     --font-light: #F8F1F6;
-    --background-light: #F8F2F4;
-    --background-dark: #1B0227;
-    --background-default: #120133;
+    --box-shadow: #F8F1F6CC;
 }
 
 html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(to right, var(--accent-transparent-1), var(--accent-transparent-2)), url(../img/background.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 body {
-    margin: 0;
+    margin: 26px 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-}
-
-.main-title {
-    height: 40px;
-    object-position: 50% 50%;
-}
-
-.main-title > h1 {
-    font-size: 36px;
-    font-weight: 400;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0;
 }
 
 .progress-bar {
@@ -53,11 +41,12 @@ body {
 
 progress[value]::-webkit-progress-bar{
     background-color: var(--accent-transparent-1);
+    border: solid 2px var(--accent-color-1);
     border-radius: 4rem;
 }
 
 progress[value]::-webkit-progress-value{
-    background-color: var(--accent-color-1);
+    background-color: var(--font-light);
     border-radius: 4rem;
 }
 
@@ -76,6 +65,7 @@ progress[value]::-webkit-progress-value{
 
 .pass-card>h3 {
     margin: 0;
+    color: var(--font-light);
 }
 
 .card {
@@ -99,7 +89,7 @@ progress[value]::-webkit-progress-value{
 .buttons > button {
     height: 2.5rem;
     width: 8rem;
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color-2);
     border-radius: 30px;
     border: none;
     font-size: 16px;
@@ -109,4 +99,6 @@ progress[value]::-webkit-progress-value{
 .buttons > button:hover {
     cursor: pointer;
     background-color: var(--accent-transparent-2);
+    border: solid 1.5px var(--accent-transparent-1);
+    box-shadow: 0 0 12px 0 var(--box-shadow);
 }
